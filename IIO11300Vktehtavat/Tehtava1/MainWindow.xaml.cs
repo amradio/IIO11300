@@ -33,11 +33,22 @@ namespace Tehtava1
 
         private void btnCalculate_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
             try
             {
-                double result;
-                result = BusinessLogicWindow.CalculatePerimeter(1, 1);
+
+                double width = int.Parse(txtWidth.Text);
+                double height = int.Parse(txtHeight.Text);
+                double border = int.Parse(txtBorder.Text);
+
+                double perimeter, area, borderArea;
+                perimeter = BusinessLogicWindow.CalculatePerimeter(width, height);
+                area = BusinessLogicWindow.CalculateWindowArea(width, height, border);
+                borderArea = BusinessLogicWindow.CalculateBorderArea(width, height, border);
+
+                tbResult.Text = "";
+                tbResult.Text += "Lasin pinta-ala: "+area.ToString()+"\n";
+                tbResult.Text += "Karmin pinta-ala: " + borderArea.ToString() + "\n";
+                tbResult.Text += "Karmin piiri: " + perimeter.ToString();
             }
             catch (Exception ex)
             {

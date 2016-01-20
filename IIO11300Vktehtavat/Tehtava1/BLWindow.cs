@@ -17,5 +17,20 @@ namespace Tehtava1
             perimeter = width * 2 + height * 2;
             return perimeter;
         }
+
+        public static double CalculateWindowArea(double width, double height, double border)
+        {
+            double area;
+            area = (width - border * 2) * (height - border * 2);
+            return area;
+        }
+
+        public static double CalculateBorderArea(double width, double height, double border)
+        {
+            double totarea, area;
+            totarea = (width * height);
+            area = totarea - CalculateWindowArea(width, height, border);
+            return area;
+        }
     }
 }

@@ -5,39 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tehtava1"
         mc:Ignorable="d"
-        Title="Oy K-S Windows Ab" Height="350" Width="700" FontSize="18">
+        Title="Oy K-S Windows Ab" Height="350" Width="376.069" FontSize="18" ResizeMode="CanMinimize">
     <Grid>
         <StackPanel Orientation="Horizontal">
             <StackPanel Orientation="Vertical">
                 <TextBlock x:Name="tbWidth" Text="Ikkunan leveys" Height="28" Margin="10,10,10,0" />
                 <TextBox x:Name="txtWidth" Text="600" Height="28" Width="114" Margin="10,10,10,0" />
-                <TextBlock x:Name="tbHeight" Text="Ikkunan Korkeus" Height="28" Margin="10,10,10,0" />
+                <TextBlock x:Name="tbHeight" Text="Ikkunan korkeus" Height="28" Margin="10,10,10,0" />
                 <TextBox x:Name="txtHeight" Text="600" Height="28" Width="114" Margin="10,10,10,0" />
+                <TextBlock x:Name="tbBorder" Text="Karmipuun leveys" Height="28" Margin="10,10,10,0" />
+                <TextBox x:Name="txtBorder" Text="45" Height="28" Width="114" Margin="10,10,10,0" />
             </StackPanel>
-            <StackPanel Orientation="Vertical">
-                <Rectangle x:Name="myRectangle" Fill="#FF10ABF3" StrokeThickness="2" Width="300" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Stroke="Black" />
-            </StackPanel>
-            <StackPanel Orientation="Vertical">
-                <Button x:Name="btnCalculate" Content="Laske pinta-ala ja piiri" Height="32" Width="180" Click="btnCalculate_Click" Margin="10,10,10,0">
-                    <Button.Foreground>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Black" Offset="0"/>
-                            <GradientStop Color="#FFF300FF" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Button.Foreground>
-                    <Button.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF3BF6FF" Offset="0"/>
-                            <GradientStop Color="#FFA60000" Offset="1"/>
-                            <GradientStop Color="#FF1AFF57" Offset="0.524"/>
-                            <GradientStop Color="#FFFF1414" Offset="0.176"/>
-                            <GradientStop Color="#FF8877FF" Offset="0.315"/>
-                            <GradientStop Color="#FFFF610F" Offset="0.791"/>
-                            <GradientStop Color="#FF09FFF4" Offset="0.868"/>
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
+            <StackPanel Orientation="Vertical" >
+                <Button x:Name="btnCalculate" Content="Laske pinta-ala ja piiri" Height="32" Width="180" Click="btnCalculate_Click" Margin="10,10,10,0" />
                 <Button x:Name="btnClose" Content="Sulje" Height="32" Width="180" Click="btnClose_Click" Margin="10,10,10,0" Background="#FFFF00F3"/>
+                <TextBlock x:Name="tbResult" TextWrapping="Wrap" Height="149"  Width="180" Margin="10,10,10,0" />
             </StackPanel>
         </StackPanel>
     </Grid>
